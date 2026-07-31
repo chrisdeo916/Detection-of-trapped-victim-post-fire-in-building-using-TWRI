@@ -30,3 +30,47 @@ This repository contains the software, firmware, and simulation models for a low
 ├── Schematics/
 │   └── circuit_diagram.png         # Hardware pin connections & breadboard wiring layout
 └── README.md                       # Documentation and usage guide
+
+
+Here are key sections tailored specifically to highlight this dashboard interface in your repository's **README.md**:
+
+---
+
+## 🖥 System Interface & Feature Overview
+
+The interactive **TWRI Search-and-Rescue Mission Control Dashboard** offers real-time visualization, telemetry tuning, and target analysis:
+
+* **Live Live Plot & Sector Scan:** Displays live target tracking across designated scan zones (e.g., *Room 1*, *Room 2*), showing target locks (*Survivor Alpha*, *Beta*, *Gamma*) along with spatial coordinates.
+* **Scan Modes & Control Operations:** Allows real-time toggling between operational modes (**Sector Mode**, **Linear Mode**, **Thermal Mode**, **Deep Mode**) and adjustable scan speeds ($1\times$ to $4\times$).
+* **Obstacle & Medium Tuning:** Real-time parameter adjustment for different wall materials (**Drywall**, **Brick**, **Concrete**) to account for material absorption, pulse velocity, and penetration loss.
+* **Biometric Life-Signs Analysis:** Monitors target statistics, occupancy status per room, individual confidence scores, estimated depth, and real-time respiratory rate waveforms (BPM).
+* **B-Scan Waterfall History & A-Scan Oscilloscope:** Tracks time-integrated signal returns and real-time wave amplitude (Raw, Filtered, and Adaptive Noise Floor) with background clutter suppression.
+
+---
+
+## 📂 System Architecture & Modules
+
+```text
+├── Dashboard UI /
+│   ├── MissionControl.py       # Main GUI dashboard & control panel
+│   ├── RadarPlotter.py         # Sector plot & target position engine
+│   └── BiometricTracker.py     # Respiration signal telemetry & target scoring
+├── Signal Processing /
+│   ├── WaveformGenerator.py    # Gaussian pulse wave propagation & attenuation
+│   └── ClutterFilter.py        # Static rejection & adaptive noise filtering
+└── README.md
+
+```
+
+---
+
+## 📸 Simulation Screenshots & Demonstration
+
+Add a section to display your simulation visual outputs or feature walkthrough:
+
+```markdown
+### Live Radar Mission Control Interface
+![TWRI Dashboard Overview](path/to/screenshot_or_gif.gif)
+*Figure: Real-time mission control interface performing deep-mode scanning across structural obstacles.*
+
+```
